@@ -1,8 +1,8 @@
-<p align="center">
+<div align="center">
   
   # ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers 
   
-</p>
+</div>
 
 <p align="center">
   <a href="https://ming053l.github.io/ELSA_projectpage/">[Project Page]</a> &nbsp;|&nbsp;
