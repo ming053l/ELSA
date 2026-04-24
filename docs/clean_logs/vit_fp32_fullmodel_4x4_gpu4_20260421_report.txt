@@ -1,0 +1,26 @@
+Strict ELSA two-level scan coverage report
+Generated: 2026-04-21 11:52:47
+
+Definition used:
+- latency comparable <= 1.05x baseline; latency better <= 0.98x baseline.
+- memory comparable <= 1.05x baseline; memory better <= 0.98x baseline.
+- pass means latency and memory are both at least comparable, and at least one is better.
+- fp16 attention baseline is Flash-SDPA/FA2 forced through PyTorch SDPA.
+- fp32 attention baseline is Math-SDPA forced through PyTorch SDPA.
+- full-model ViT baseline is deit_tiny_patch16_224; full-model Swin baseline is native swinv2_tiny.
+- ELSA backend is strict_core_ref, with native two-level scan kernels plus narrow exact-SDPA fast paths on selected batch-1 shapes.
+
+Summary: 4/4 measured variants pass.
+
+Failed or not-measured variants:
+- none
+
+Coverage matrix:
+family,dtype,mode,direction,variant,seq_len,batch,baseline,lat_ratio,lat_status,mem_ratio,mem_status,cell_status
+vit,fp32,full-model,fwd,vit-img224,196,2,deit_tiny_patch16_224,0.7773,better,0.9879,comparable,pass
+vit,fp32,full-model,fwd,vit-img384,576,2,deit_tiny_patch16_224,0.7833,better,0.7720,better,pass
+vit,fp32,full-model,fwd_bwd,vit-img224,196,2,deit_tiny_patch16_224,0.8183,better,0.7413,better,pass
+vit,fp32,full-model,fwd_bwd,vit-img384,576,2,deit_tiny_patch16_224,0.9854,comparable,0.7109,better,pass
+
+Raw benchmark errors:
+- none

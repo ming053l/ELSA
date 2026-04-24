@@ -1,0 +1,19 @@
+# Core
+torch>=2.1
+triton>=2.2
+timm>=0.9
+
+# Numerical / data
+numpy>=1.24
+pandas>=1.5
+
+# Visualisation
+matplotlib>=3.7
+seaborn>=0.12
+
+# Downstream fine-tuning validation
+datasets>=2.14
+Pillow>=9.0
+
+# Optional: alternative attention backends
+# xformers  # uncomment if you want xformers comparisons

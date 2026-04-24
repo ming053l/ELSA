@@ -1,0 +1,48 @@
+Strict ELSA two-level scan coverage report
+Generated: 2026-04-19 22:59:56
+
+Definition used:
+- latency comparable <= 1.05x baseline; latency better <= 0.98x baseline.
+- memory comparable <= 1.05x baseline; memory better <= 0.98x baseline.
+- pass means latency and memory are both at least comparable, and at least one is better.
+- fp16 attention baseline is Flash-SDPA/FA2 forced through PyTorch SDPA.
+- fp32 attention baseline is Math-SDPA forced through PyTorch SDPA.
+- full-model ViT baseline is deit_tiny_patch16_224; full-model Swin baseline is native swinv2_tiny.
+- ELSA backend is strict_core_ref, with native two-level scan kernels plus narrow exact-SDPA fast paths on selected batch-1 shapes.
+
+Summary: 5/16 measured variants pass.
+
+Failed or not-measured variants:
+- swin fp16 full-model fwd swin-W8-img256: fail, lat_ratio=2.1366, mem_ratio=1.0257, lat=worse, mem=comparable
+- swin fp16 full-model fwd_bwd swin-W16-img256: fail, lat_ratio=1.1789, mem_ratio=0.7383, lat=worse, mem=better
+- swin fp32 full-model fwd swin-W8-img256: fail, lat_ratio=1.6384, mem_ratio=1.0396, lat=worse, mem=comparable
+- swin fp32 full-model fwd_bwd swin-W16-img256: fail, lat_ratio=0.9907, mem_ratio=1.0399, lat=comparable, mem=comparable
+- swin fp32 full-model fwd_bwd swin-W8-img256: fail, lat_ratio=1.3985, mem_ratio=1.0666, lat=worse, mem=worse
+- vit fp16 full-model fwd vit-img224: fail, lat_ratio=3.6656, mem_ratio=1.0000, lat=worse, mem=comparable
+- vit fp16 full-model fwd vit-img384: fail, lat_ratio=1.6170, mem_ratio=1.0010, lat=worse, mem=comparable
+- vit fp16 full-model fwd_bwd vit-img224: fail, lat_ratio=1.3745, mem_ratio=0.7532, lat=worse, mem=better
+- vit fp32 full-model fwd vit-img224: fail, lat_ratio=1.2469, mem_ratio=0.9879, lat=worse, mem=comparable
+- vit fp32 full-model fwd_bwd vit-img224: fail, lat_ratio=1.3686, mem_ratio=1.0000, lat=worse, mem=comparable
+- vit fp32 full-model fwd_bwd vit-img384: fail, lat_ratio=1.0888, mem_ratio=0.7084, lat=worse, mem=better
+
+Coverage matrix:
+family,dtype,mode,direction,variant,seq_len,batch,baseline,lat_ratio,lat_status,mem_ratio,mem_status,cell_status
+swin,fp16,full-model,fwd,swin-W16-img256,256,8,swinv2_tiny_window16_256,0.5919,better,0.7976,better,pass
+swin,fp16,full-model,fwd,swin-W8-img256,64,8,swinv2_tiny_window8_256,2.1366,worse,1.0257,comparable,fail
+swin,fp16,full-model,fwd_bwd,swin-W16-img256,256,8,swinv2_tiny_window16_256,1.1789,worse,0.7383,better,fail
+swin,fp16,full-model,fwd_bwd,swin-W8-img256,64,8,swinv2_tiny_window8_256,0.7359,better,0.9443,better,pass
+swin,fp32,full-model,fwd,swin-W16-img256,256,2,swinv2_tiny_window16_256,0.8732,better,1.0254,comparable,pass
+swin,fp32,full-model,fwd,swin-W8-img256,64,2,swinv2_tiny_window8_256,1.6384,worse,1.0396,comparable,fail
+swin,fp32,full-model,fwd_bwd,swin-W16-img256,256,2,swinv2_tiny_window16_256,0.9907,comparable,1.0399,comparable,fail
+swin,fp32,full-model,fwd_bwd,swin-W8-img256,64,2,swinv2_tiny_window8_256,1.3985,worse,1.0666,worse,fail
+vit,fp16,full-model,fwd,vit-img224,196,8,deit_tiny_patch16_224,3.6656,worse,1.0000,comparable,fail
+vit,fp16,full-model,fwd,vit-img384,576,8,deit_tiny_patch16_224,1.6170,worse,1.0010,comparable,fail
+vit,fp16,full-model,fwd_bwd,vit-img224,196,8,deit_tiny_patch16_224,1.3745,worse,0.7532,better,fail
+vit,fp16,full-model,fwd_bwd,vit-img384,576,8,deit_tiny_patch16_224,0.8154,better,0.7354,better,pass
+vit,fp32,full-model,fwd,vit-img224,196,2,deit_tiny_patch16_224,1.2469,worse,0.9879,comparable,fail
+vit,fp32,full-model,fwd,vit-img384,576,2,deit_tiny_patch16_224,1.0349,comparable,0.7720,better,pass
+vit,fp32,full-model,fwd_bwd,vit-img224,196,2,deit_tiny_patch16_224,1.3686,worse,1.0000,comparable,fail
+vit,fp32,full-model,fwd_bwd,vit-img384,576,2,deit_tiny_patch16_224,1.0888,worse,0.7084,better,fail
+
+Raw benchmark errors:
+- none

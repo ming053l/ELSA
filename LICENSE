@@ -1,0 +1,45 @@
+ELSA — Academic and Non-Commercial License
+
+Copyright (c) 2026 Chih-Chung Hsu, Xin-Di Ma, Wo-Ting Liao, Chia-Ming Lee
+Advanced Computer Vision Laboratory, National Yang Ming Chiao Tung University
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to use,
+copy, modify, and distribute the Software solely for non-commercial academic
+research purposes, subject to the following conditions:
+
+1. NON-COMMERCIAL USE ONLY.
+   The Software may not be used, in whole or in part, for any commercial
+   purpose, including but not limited to sale, licensing, or incorporation
+   into a commercial product or service, without prior written permission
+   from the copyright holders.
+
+2. PATENT RIGHTS RESERVED.
+   This license does not grant any rights in the patents or patent
+   applications of the copyright holders. All patent rights are expressly
+   reserved. Any use of the Software that would constitute infringement of
+   any patent held by the copyright holders requires a separate written
+   patent license.
+
+3. ATTRIBUTION.
+   Any academic publication, presentation, or derivative work that uses or
+   builds upon the Software must cite the following paper:
+
+     Chih-Chung Hsu, Xin-Di Ma, Wo-Ting Liao, Chia-Ming Lee.
+     "ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision
+     Transformers." CVPR 2026.
+
+4. REDISTRIBUTION.
+   Redistributions of source code must retain this license notice, the
+   above copyright notice, and the attribution requirement in Section 3.
+   Redistributions may not be sublicensed under any other terms.
+
+5. NO WARRANTY.
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+   IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES,
+   OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For commercial licensing inquiries, please contact the copyright holders.

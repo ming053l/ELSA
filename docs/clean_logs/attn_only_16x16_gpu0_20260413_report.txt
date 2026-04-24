@@ -1,0 +1,38 @@
+Strict ELSA two-level scan coverage report
+Generated: 2026-04-13 06:36:16
+
+Definition used:
+- latency comparable <= 1.05x baseline; latency better <= 0.98x baseline.
+- memory comparable <= 1.05x baseline; memory better <= 0.98x baseline.
+- pass means latency and memory are both at least comparable, and at least one is better.
+- fp16 attention baseline is Flash-SDPA/FA2 forced through PyTorch SDPA.
+- fp32 attention baseline is Math-SDPA forced through PyTorch SDPA.
+- full-model ViT baseline is deit_tiny_patch16_224; full-model Swin baseline is native swinv2_tiny.
+- ELSA backend is strict_core_ref, with native two-level scan kernels plus narrow exact-SDPA fast paths on selected batch-1 shapes.
+
+Summary: 16/16 measured variants pass.
+
+Failed or not-measured variants:
+- none
+
+Coverage matrix:
+family,dtype,mode,direction,variant,seq_len,batch,baseline,lat_ratio,lat_status,mem_ratio,mem_status,cell_status
+swin,fp16,attn-only,fwd,swin-W16,256,1,FA2,0.7822,better,1.0000,comparable,pass
+swin,fp16,attn-only,fwd,swin-W8,64,1,FA2,0.6115,better,1.0000,comparable,pass
+swin,fp16,attn-only,fwd_bwd,swin-W16,256,1,FA2,0.9206,better,1.0000,comparable,pass
+swin,fp16,attn-only,fwd_bwd,swin-W8,64,1,FA2,0.9283,better,1.0000,comparable,pass
+swin,fp32,attn-only,fwd,swin-W16,256,1,SDPA-Math,0.8229,better,0.8456,better,pass
+swin,fp32,attn-only,fwd,swin-W8,64,1,SDPA-Math,0.9334,better,0.9873,comparable,pass
+swin,fp32,attn-only,fwd_bwd,swin-W16,256,1,SDPA-Math,0.4832,better,0.8687,better,pass
+swin,fp32,attn-only,fwd_bwd,swin-W8,64,1,SDPA-Math,0.4918,better,0.9931,comparable,pass
+vit,fp16,attn-only,fwd,vit-tiny-N196,196,1,FA2,0.6242,better,1.0000,comparable,pass
+vit,fp16,attn-only,fwd,vit-tiny-N4096,4096,1,FA2,0.9317,better,0.9922,comparable,pass
+vit,fp16,attn-only,fwd_bwd,vit-tiny-N196,196,1,FA2,0.9005,better,1.0000,comparable,pass
+vit,fp16,attn-only,fwd_bwd,vit-tiny-N4096,4096,1,FA2,0.9891,comparable,0.8291,better,pass
+vit,fp32,attn-only,fwd,vit-tiny-N196,196,1,SDPA-Math,1.0348,comparable,0.8977,better,pass
+vit,fp32,attn-only,fwd,vit-tiny-N4096,4096,1,SDPA-Math,0.7803,better,0.0445,better,pass
+vit,fp32,attn-only,fwd_bwd,vit-tiny-N196,196,1,SDPA-Math,0.4985,better,0.9252,better,pass
+vit,fp32,attn-only,fwd_bwd,vit-tiny-N4096,4096,1,SDPA-Math,0.2620,better,0.0548,better,pass
+
+Raw benchmark errors:
+- none
