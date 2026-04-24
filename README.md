@@ -225,16 +225,16 @@ code/
     elsa.py                 # ElsaAttention / ElsaViT model classes
     elsa_swin.py            # Swin Transformer integration
     elsa_swin_fused.py      # Fused Swin kernel path
-    elsa_strict_ref.py      # Strict reference: ElsaStrictState + merge_states() proof  ← new
+    elsa_strict_ref.py      # Strict reference: ElsaStrictState + merge_states() proof 
   future_exp/      # Experimental paths (not used for headline claims)
-elsa_ext_pack/     # Optional native CUDA extension (C++ binding + .cu kernel)  ← new
+elsa_ext_pack/     # Optional native CUDA extension (C++ binding + .cu kernel) 
 scripts/
-  run_strict_coverage_matrix.py   # Unified strict coverage harness (16-cell matrix)  ← new
-  bench_gated_deltanet_vs_elsa.py # vs GatedDeltaNet  ← new
-  bench_nystromformer_vs_elsa.py  # vs Nyströmformer  ← new
-  bench_truefp32_vs_elsa_triton.py                    ← new
-  bench_elsa_precision_compare.py                     ← new
-  bench_attn_shape_fp32.py                            ← new
+  run_strict_coverage_matrix.py   # Unified strict coverage harness (16-cell matrix) 
+  bench_gated_deltanet_vs_elsa.py # vs GatedDeltaNet
+  bench_nystromformer_vs_elsa.py  # vs Nyströmformer 
+  bench_truefp32_vs_elsa_triton.py                  
+  bench_elsa_precision_compare.py                   
+  bench_attn_shape_fp32.py                    
   benchmark_pure_attention_vit.py
   benchmark_model_throughput.py
   benchmark_train_ft_matrix.py
@@ -242,8 +242,8 @@ scripts/
   run_vit_sota.py / run_swin_sota_fused.py / run_swin_fp32_size_sweep.py
   verify_swin_elsa_exactness.py
 docs/
-  benchmark_summary.md      # Strict coverage pass/fail summary  ← new
-  clean_logs/               # Curated clean benchmark reports    ← new
+  benchmark_summary.md      # Strict coverage pass/fail summary  
+  clean_logs/               # Curated clean benchmark reports 
   FULL_REPORT_20260301.md
   RELEASE_NOTES_20260301.md
   STATUS_MATRIX_20260301.md
@@ -488,7 +488,7 @@ If you use ELSA in your research, please cite:
 @inproceedings{hsu2026elsa,
   title={ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers},
   author={Hsu, Chih-Chung and Ma, Xin-Di and Liao, Wo-Ting and Lee, Chia-Ming},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Findings},
   year={2026}
 }
 ```
