@@ -144,6 +144,9 @@ LLaMA (8B, 13B), BERT
 **하드웨어:**
 NVIDIA A100, L4, Jetson TX2 · 모든 CUDA 지원 GPU (Tensor Core 독립적)
 
+> **참고:** 이번 릴리스의 모든 벤치마크 결과는 NVIDIA GPU (A100-40GB)에서 수집되었습니다.
+> AMD/ROCm 지원은 향후 릴리스에서 제공될 예정입니다.
+
 ---
 
 ## 다른 어텐션 커널과의 비교

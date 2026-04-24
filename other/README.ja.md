@@ -144,6 +144,9 @@ LLaMA（8B、13B）、BERT
 **ハードウェア：**
 NVIDIA A100、L4、Jetson TX2 · 任意の CUDA 対応 GPU（Tensor Core 非依存）
 
+> **注記：** 本リリースのすべてのベンチマーク結果は NVIDIA GPU（A100-40GB）上で収集されました。
+> AMD/ROCm サポートは将来のリリースで提供予定です。
+
 ---
 
 ## 他のアテンションカーネルとの比較

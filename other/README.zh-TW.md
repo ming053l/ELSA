@@ -133,16 +133,22 @@ W  = exp 加權值累加器
 
 ---
 
-## 支援的模型與硬體
+## 論文測試模型與硬體
 
-**視覺模型：**
+以下模型為論文中實際測試的型號。由於 ELSA kernel 直接接受原始 Q/K/V tensor，
+任何標準 Transformer 架構均可以相同方式套用。
+
+**視覺（論文測試）：**
 ViT（Tiny / Small / Medium / Base / Large）、Swin Transformer、CLIP、SAM、VGGT、HSI-MAE
 
-**語言模型：**
+**語言（論文測試）：**
 LLaMA（8B、13B）、BERT
 
 **硬體平台：**
 NVIDIA A100、L4、Jetson TX2 · 任何支援 CUDA 的 GPU（不依賴 Tensor Core）
+
+> **注意：** 本次 release 的所有 benchmark 結果均在 NVIDIA GPU（A100-40GB）上收集。
+> AMD/ROCm 支援預計於後續版本提供。
 
 ---
 

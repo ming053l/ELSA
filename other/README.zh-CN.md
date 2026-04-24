@@ -144,6 +144,9 @@ LLaMA（8B、13B）、BERT
 **硬件平台：**
 NVIDIA A100、L4、Jetson TX2 · 任何支持 CUDA 的 GPU（不依赖 Tensor Core）
 
+> **注意：** 本次 release 的所有 benchmark 结果均在 NVIDIA GPU（A100-40GB）上收集。
+> AMD/ROCm 支持计划于后续版本提供。
+
 ---
 
 ## 与其他注意力核的比较
