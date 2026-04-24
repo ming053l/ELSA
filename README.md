@@ -495,7 +495,7 @@ If you use ELSA in your research, please cite:
 @inproceedings{hsu2026elsa,
   title={ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers},
   author={Hsu, Chih-Chung and Ma, Xin-Di and Liao, Wo-Ting and Lee, Chia-Ming},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Findings},
   year={2026}
 }
 ```
