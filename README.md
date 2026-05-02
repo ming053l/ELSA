@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://ming053l.github.io/ELSA_projectpage/">[Project Page]</a> &nbsp;|&nbsp;
-  <a href="#">[Paper (CVPR 2026)]</a> &nbsp;|&nbsp;
+  <a href="https://arxiv.org/abs/2604.23798">[Paper (arXiv)]</a> &nbsp;|&nbsp;
   <a href="#citation">[Citation]</a>
 </p>
 
