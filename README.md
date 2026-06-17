@@ -1,4 +1,4 @@
-# ELSA Two-Pass — exact monoid attention with parallel scan (A100-validated)
+# ELSA Two-Pass — Exact Monoid Attention with Parallel Scan (A100-validated)
 
 <p align="center">
   <a href="https://ming053l.github.io/ELSA_projectpage/">[Project Page]</a> &nbsp;|&nbsp;
