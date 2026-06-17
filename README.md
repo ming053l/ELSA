@@ -1,5 +1,19 @@
 # ELSA Two-Pass — exact monoid attention with parallel scan (A100-validated)
 
+<p align="center">
+  <a href="https://ming053l.github.io/ELSA_projectpage/">[Project Page]</a> &nbsp;|&nbsp;
+  <a href="https://arxiv.org/abs/2604.23798">[Paper (arXiv)]</a> &nbsp;|&nbsp;
+  <a href="#citation">[Citation]</a>
+</p>
+
+**Chih-Chung Hsu, Xin-Di Ma, Wo-Ting Liao, Chia-Ming Lee**
+
+Advanced Computer Vision Laboratory, National Yang Ming Chiao Tung University · CVPR Findings 2026
+
+> 🏆 **ELSA received the CVPR 2026 Computational Transparency Award Champion!!**
+
+---
+
 A clean-room implementation of **ELSA** (exact linear-memory softmax attention,
 arXiv 2604.23798): exact attention computed as a **two-level parallel scan over an
 associative monoid**, with O(n) extra memory and O(log n) merge depth — **no
@@ -110,6 +124,26 @@ attn fp16 N=16384       | phase1=4 | K-partitions=8 | phase2 reads HBM summary s
 ViT fp32 img1024 N=4097 | phase1=9 | K-partitions=3 | phase2 reads HBM summary shape=(36864,)
 VERIFY: TWO-PASS PARALLEL SCAN CONFIRMED
 ```
+
+## Citation
+
+If you use ELSA in your research, please cite:
+
+```bibtex
+@inproceedings{hsu2026elsa,
+  title={ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers},
+  author={Hsu, Chih-Chung and Ma, Xin-Di and Liao, Wo-Ting and Lee, Chia-Ming},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Findings},
+  year={2026}
+}
+```
+
+## Acknowledgments
+
+This study was supported in part by the National Science and Technology Council (NSTC), Taiwan,
+under grants 112-2221-E-006-157-MY3, 114-2627-M-A49-003, 114-2218-E-035-001, and 114-2119-M-006-007.
+We thank the National Center for High-performance Computing (NCHC) of National Applied Research
+Laboratories (NARLabs) in Taiwan for providing computational and storage resources.
 
 ## License
 
